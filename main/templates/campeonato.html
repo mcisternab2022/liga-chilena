@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container marketing">
+
+  <section id="team" class="team section-bg text-center featured-services">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+      <div class="section-title text-center">
+        <h2>Campeonato</h2>
+        <h3>Tabla de posiciones</h3>
+        <p>Descensos, clasificación a copas internacionales y por supuesto, el campeón.</p>
+      </div>
+      <div class="row">
+
+      <table class="table table-bordered text-center">
+        <thead class="bg-dark text-light">
+          <tr>
+            <th scope="col">Posiciones</th>
+            <th scope="col">Equipo</th>
+            <th scope="col">PJ</th>
+            <th scope="col">PG</th>
+            <th scope="col">PE</th>
+            <th scope="col">PP</th>
+            <th scope="col">Goles a favor</th>
+            <th scope="col">Goles en contra</th>
+            <th scope="col">Diferencia</th>
+            <th scope="col">Puntos</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for equipo in posiciones %}
+          <tr class="fondo row-{{forloop.counter}}">
+            <th scope="row">{{forloop.counter}}</th>
+            <td><img src="{{ equipo.equipo.imagen.url }}" alt="escudo" width="30"> {{equipo}}</td>
+            <td>{{equipo.partidos_jugados}}</td>
+            <td>{{equipo.partidos_ganados}}</td>
+            <td>{{equipo.partidos_empatados}}</td>
+            <td>{{equipo.partidos_perdidos}}</td>
+            <td>{{equipo.goles_favor}}</td>
+            <td>{{equipo.goles_contra}}</td>
+            <td>{{equipo.diferencia}}</td>
+            <td><strong>{{equipo.puntos}}</strong></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    
+    </div>
+  </section>
+</div>
+
+{% endblock %}

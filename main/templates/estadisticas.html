@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container marketing">
+
+  <section id="team" class="team section-bg text-center">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Estadisticas</h2>
+        <h3>Los mejores del <span>Campeonato</span></h3>
+        <p>Aquí podrás ver a los máximos goleadores del campeonato, los que más asisten, entre otros.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <div class="member-img">
+              <img src="{% static '/img/lucero.jpg' %}" class="img-fluid" alt="lucero">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Juan Martin Lucero</h4>
+              <span>Colo-Colo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+          <div class="member">
+            <div class="member-img">
+              <img src="{% static '/img/palacios.jpg' %}" class="img-fluid" alt="palacios">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Cristian Palacios</h4>
+              <span>Universidad de Chile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+          <div class="member">
+            <div class="member-img">
+              <img src="{% static '/img/zampedri.jpg' %}" class="img-fluid" alt="zampedri">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>William Anderson</h4>
+              <span>CTO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+          <div class="member">
+            <div class="member-img">
+              <img src="{% static '/img/coelho.jpg' %}" class="img-fluid" alt="coelho">
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Amanda Jepson</h4>
+              <span>Accountant</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
+{% endblock %}

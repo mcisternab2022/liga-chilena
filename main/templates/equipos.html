@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ======= Featured Services Section ======= -->
+<div class="container marketing">
+
+  <section id="team" class="team section-bg text-center featured-services">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+      <div class="section-title text-center">
+        <h2>Equipos</h2>
+        <h3>Los clubes del campeonato 2022</h3>
+        <p>Estos son los 16 equipos que conforman el campeonato chileno de primera división.</p>
+      </div>
+      <div class="row">
+
+      {% for equipo in equipos %}
+
+      <div class="col-md-6 col-lg-3 py-2 px-2">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+          {% if equipo.imagen %}
+          <img class="escudo mx-auto d-block" src="{{ equipo.imagen.url }}" alt="{{equipo}}" width="100">
+          {% endif %}
+
+          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="">{{equipo}}</a></h4>
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+    <br>
+  </section>
+
+</div>
+<!-- End Featured Services Section -->
+{% endblock %}

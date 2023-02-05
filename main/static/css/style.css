@@ -1,0 +1,240 @@
+body {
+  margin: 0 auto;
+}
+
+.navbar {
+  background: linear-gradient(159deg, rgba(9, 30, 121, 1) 0%, rgba(16, 153, 205, 1) 52%, rgba(29, 162, 243, 1) 100%);
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.nav-item:hover {
+  background-color: #ffffff;
+  border-radius: var(--bs-border-radius)!important;
+  transition: 0.5s;
+
+}
+
+footer {
+  background: linear-gradient(273deg, rgba(165, 16, 52, 1) 6%, rgba(177, 27, 62, 1) 49%, rgba(43, 38, 38, 1) 100%);
+  color: beige;
+}
+
+#barra-inferior {
+  background: linear-gradient(273deg, rgba(34, 29, 29, 1) 0%, rgba(215, 36, 78, 1) 50%, rgba(34, 29, 29, 1) 100%);
+}
+
+#barra-info {
+  background-color: black;
+  color: azure;
+}
+
+/* Colores zona tabla de posiciones */
+
+.row-1 {
+  background: rgb(22, 255, 84)
+}
+
+.row-2,.row-3 {
+  background: rgb(17, 209, 33)
+}
+
+.row-4,.row-5,.row-6,.row-7 {
+  background: rgb(15, 175, 250)
+}
+
+.row-8,.row-9,.row-10,.row-11,.row-12,.row-13,.row-14 {
+  background: rgb(250, 199, 15)
+}
+
+.row-15,.row-16{
+  background: rgb(255, 91, 91)
+}
+
+.fondo:hover {
+  background: rgb(15, 114, 180);
+  color: azure;
+}
+
+/*--------------------------------------------------------------
+# Featured Services
+--------------------------------------------------------------*/
+.fondo-futbol {
+  background-image: url('https://img.freepik.com/vector-premium/patron-futbol-fisuras-sobre-fondo-blanco-diseno-creativo-icono-futbol-simple-puede-utilizar-papel-tapiz-fondo-pagina-web-textil-impresion-ui-ux_159242-3144.jpg?w=2000');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*--------------------------------------------------------------
+# Featured Services
+--------------------------------------------------------------*/
+.featured-services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.featured-services .icon-box::before {
+  content: "";
+  position: absolute;
+  background: #cbe0fb;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.featured-services .icon-box:hover::before {
+  background: #1d4478;
+  top: 0;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.title {
+  text-decoration: none;
+}
+
+.escudo:hover {
+  cursor: pointer;
+}
+
+.featured-services .icon {
+  margin-bottom: 15px;
+}
+
+.featured-services .icon i {
+  font-size: 48px;
+  line-height: 1;
+  color: #106eea;
+  transition: all 0.3s ease-in-out;
+}
+
+.featured-services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.featured-services .title a {
+  color: #111;
+}
+
+.featured-services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.featured-services .icon-box:hover .title a,
+.featured-services .icon-box:hover .description {
+  color: #fff;
+}
+
+.featured-services .icon-box:hover .icon i {
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Estadisticas
+--------------------------------------------------------------*/
+.section-title h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  background: #e7f1fd;
+  color: #106eea;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.team {
+  padding: 60px 0;
+}
+
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(14, 14, 14, 0.15);
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #222222;
+  margin: 0 3px;
+  padding-top: 7px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background: rgba(2, 4, 7, 0.8);
+  display: inline-block;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}
+
+.team .member .social a:hover {
+  background: #3b8af2;
+}
+
+.team .member .social i {
+  font-size: 18px;
+}
+
+.team .member .member-info {
+  padding: 25px 15px;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #222222;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+
+.team .member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
