@@ -34,8 +34,7 @@ def estadisticas(request):
 
 @login_required
 def equipos(request):
-    equipos = Equipo.objects.all()
-    return render(request, 'equipos.html', {'equipos': equipos})
+    return render(request, 'equipos.html')
 
 
 def signup(request):
