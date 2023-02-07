@@ -19,9 +19,7 @@
 
       <div class="col-md-6 col-lg-3 py-2 px-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          {% if equipo.imagen %}
-          <img class="escudo mx-auto d-block" src="{{ equipo.imagen.url }}" alt="{{equipo}}" width="100">
-          {% endif %}
+          <img class="escudo mx-auto d-block" src="{% static 'img/{{equipo}}.png' %}" alt="{{equipo}}" width="100">
 
           <h4 class="title text-center text-uppercase pt-4"><a class="title" href="">{{equipo}}</a></h4>
         </div>

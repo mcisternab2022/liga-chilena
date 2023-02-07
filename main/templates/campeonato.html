@@ -33,7 +33,7 @@
           {% for equipo in posiciones %}
           <tr class="fondo row-{{forloop.counter}}">
             <th scope="row">{{forloop.counter}}</th>
-            <td><img src="{{ equipo.equipo.imagen.url }}" alt="escudo" width="30"> {{equipo}}</td>
+            <td><img src="{% static 'img/{{equipo}}.png' %}" alt="escudo" width="30"> {{equipo}}</td>
             <td>{{equipo.partidos_jugados}}</td>
             <td>{{equipo.partidos_ganados}}</td>
             <td>{{equipo.partidos_empatados}}</td>
