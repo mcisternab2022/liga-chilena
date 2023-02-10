@@ -1,9 +1,10 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Equipo(models.Model):
   nombre_equipo = models.CharField(max_length=50)
-  imagen = models.ImageField(upload_to="escudos", null=True)
+  imagen = CloudinaryField('escudos')
 
   def __str__(self):
       return self.nombre_equipo
@@ -12,7 +13,7 @@ class Equipo(models.Model):
 class Jugador(models.Model):
   nombre_jugador = models.CharField(max_length=200)
   equipo = models.ForeignKey(Equipo, on_delete=models.PROTECT)
-  foto = models.ImageField(upload_to="jugadores", null=True)
+  foto = CloudinaryField('jugadores')
   fecha_nacimiento = models.DateField()
   dorsal = models.IntegerField()
   goles = models.IntegerField()
