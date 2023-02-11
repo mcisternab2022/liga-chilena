@@ -14,129 +14,17 @@
         <p>Estos son los 16 equipos que conforman el campeonato chileno de primera división.</p>
       </div>
       <div class="row">
-
+        {% for e in equipos %}
         <div class="col-md-6 col-lg-3 py-2 px-2">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-            <img class="mx-auto d-block" src="{% static 'img/Colo-Colo.png' %}" alt="Colo-Colo" width="100">
+            <img class="mx-auto d-block" src="{{ e.imagen.url }}" alt="{{e}}" width="100">
 
-            <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://www.colocolo.cl" target="_blank">Colo-Colo</a></h4>
+            <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://www.colocolo.cl" target="_blank">{{e}}</a></h4>
           </div>
         </div>
+        {% endfor %}
 
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/Universidad de Chile.png' %}" alt="Universidad de Chile" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://www.udechile.cl" target="_blank">Universidad de Chile</a></h4>
-        </div>
       </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/Universidad Católica.png' %}" alt="Universidad Católica" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://cruzados.cl" target="_blank">Universidad Católica</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/Unión Española.png' %}" alt="Unión Española" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://unionespanola.cl" target="_blank">Unión Española</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/Magallanes.png' %}" alt="Magallanes" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://www.clubmagallanes.cl" target="_blank">Magallanes</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/Audax Italiano.png' %}" alt="Audax Italiano" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://www.audaxitaliano.cl" target="_blank">Audax Italiano</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/Everton.png' %}" alt="Everton" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://everton.cl" target="_blank">Everton</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/Palestino.png' %}" alt="Palestino" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://palestino.cl" target="_blank">Palestino</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/ohigins.png' %}" alt="Palestino" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://www.ohigginsfc.cl" target="_blank">O'Higgins</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/huachi.png' %}" alt="Huachipato" width="100">
-
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="http://www.cdhuachipato.cl" target="_blank">Huachipato</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/Escudo_Cobresal.png' %}" alt="Cobresal" width="100">
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://cdcobresal.cl" target="_blank">Cobresal</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/nuble.png' %}" alt="Ñublense" width="100">
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://losdiablosrojos.cl" target="_blank">Ñublense</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/unioncalera.png' %}" alt="Unión La Calera" width="100">
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://ulc.cl" target="_blank">Unión La Calera</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/curi.png' %}" alt="Curicó Unido" width="100">
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://curicounido.cl" target="_blank">Curicó Unido</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/coquimbo.png' %}" alt="Coquimbo" width="100">
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://www.Coquimbo Unidounido.cl" target="_blank">Coquimbo</a></h4>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 py-2 px-2">
-        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <img class="mx-auto d-block" src="{% static 'img/copiapo.png' %}" alt="Deportes Copiapó" width="100">
-          <h4 class="title text-center text-uppercase pt-4"><a class="title" href="https://clubdeportescopiapo.cl" target="_blank">Deportes Copiapó</a></h4>
-        </div>
-      </div>
-
 
     </div>
 

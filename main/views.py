@@ -12,16 +12,19 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request, 'home.html')
 
+
 @login_required
 def campeonato(request):
-    posiciones = Tabla.objects.all().order_by('-puntos','-diferencia','-goles_favor')
+    posiciones = Tabla.objects.all().order_by(
+        '-puntos', '-diferencia', '-goles_favor')
     posicion = 1
     data = {
-        'posicion':posicion,
+        'posicion': posicion,
         'posiciones': posiciones,
     }
 
     return render(request, 'campeonato.html', data)
+
 
 @login_required
 def estadisticas(request):
@@ -32,9 +35,14 @@ def estadisticas(request):
 
     return render(request, 'estadisticas.html', data)
 
+
 @login_required
 def equipos(request):
-    return render(request, 'equipos.html')
+    equipos = Equipo.objects.all()
+    data = {
+        'equipos': equipos,
+    }
+    return render(request, 'equipos.html', data)
 
 
 def signup(request):
@@ -80,6 +88,7 @@ def iniciar_sesion(request):
         else:
             login(request, user)
             return redirect('campeonato')
+
 
 @login_required
 def cerrar_sesion(request):
