@@ -28,7 +28,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand text-light" href="#">
+        <a class="navbar-brand text-light" href="/">
           <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="logo">
           Campeonato Chileno
         </a>
@@ -40,27 +40,27 @@
           {% if user.is_authenticated %}
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
             <li class="nav-item float-sm-right">
-              <a class="nav-link active text-center" href="/">Inicio <i class="bi bi-house-fill"></i></a>
+              <a class="nav-link active text-center" href="/">{% if request.path == '/' %}<u>Inicio</u>{% else %}Inicio{% endif %} <i class="bi bi-house-fill"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-center" href="/campeonato">Campeonato <i class="bi bi-trophy-fill"></i></a>
+              <a class="nav-link active text-center" href="/campeonato">{% if request.path == '/campeonato/' %}<u>Campeonato</u>{% else %}Campeonato{% endif %} <i class="bi bi-trophy-fill"></i></a>
               </>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-center" href="/estadisticas">Estadisticas <i
+              <a class="nav-link active text-center" href="/estadisticas">{% if request.path == '/estadisticas/' %}<u>Estadisticas</u>{% else %}Estadisticas{% endif %} <i
                   class="bi bi-bar-chart-fill"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-center" href="/equipos">Equipos <i class="bi bi-shield-shaded"></i></a>
+              <a class="nav-link active text-center" href="/equipos">{% if request.path == '/equipos/' %}<u>Equipos</u>{% else %}Equipos{% endif %} <i class="bi bi-shield-shaded"></i></a>
             </li>
           </ul>
           <div class="text-center">
-            <a href="/logout"><button class="btn btn-dark mx-2" type="button">Logout <i
+            <a href="/logout"><button class="btn btn-dark mx-2" type="button">Cerrar Sesión <i
               class="bi bi-box-arrow-left"></i></button></a>
           </div>
           {% else %}
           <div class="text-center mx-auto">
-            <a href="/login"><button class="btn btn-dark" type="button">Iniciar sesión</button></a>
+            <a href="/login"><button class="btn btn-dark" type="button">Iniciar Sesión</button></a>
             <a href="/signup"><button class="btn btn-dark" type="button">Registro</button></a>
           </div>
           {% endif %}
@@ -69,8 +69,7 @@
     </nav>
   </header>
 
-  <marquee id="barra-info" behavior="scroll" direction="left">Primera división Chile - Copa Chile - Supercopa -
-    Estadísticas - Equipos nacionales - Rankings -Goles.</marquee>
+  <marquee id="barra-info" behavior="scroll" direction="left">Primera división Chile - Copa Chile - Supercopa - Estadísticas - Equipos nacionales - Rankings -Goles.</marquee>
 
   {% endblock %}
 
@@ -86,30 +85,30 @@
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <!-- Left -->
-      <div class="me-5 d-none d-lg-block ">
-        <span>Conectate con nosotros a través de nuestras redes sociales:</span>
-      </div>
-      <!-- Left -->
+      <div class="row mx-auto">
+        <div class="col-lg-12 text-center">
+          <span>Conectate con nosotros a través de nuestras redes sociales:</span>
+          
+          <div class="p-4">
+            <a href="#" class="text-decoration-none px-2">
+              <img src="{% static 'img/facebook.png' %}" alt="facebook" width="40">
+            </a>
+            <a href="#" class="text-decoration-none px-2">
+              <img src="{% static 'img/instagram.png' %}" alt="instagram" width="40">
+            </a>
+            <a href="#" class="text-decoration-none px-2">
+              <img src="{% static 'img/twitter.png' %}" alt="twitter" width="40">
+            </a>
+            <a href="#" class="text-decoration-none px-2">
+              <img src="{% static 'img/tiktok.png' %}" alt="tiktok" width="40">
+            </a>
+            <a href="#" class="text-decoration-none px-2">
+              <img src="{% static 'img/spotify.png' %}" alt="spotify" width="40">
+            </a>
+          </div>
 
-      <!-- Right -->
-      <div>
-        <a href="#" class="me-4 text-decoration-none">
-          <img src="{% static 'img/facebook.png' %}" alt="facebook" width="40">
-        </a>
-        <a href="#" class="me-4 text-decoration-none">
-          <img src="{% static 'img/instagram.png' %}" alt="instagram" width="40">
-        </a>
-        <a href="#" class="me-4 text-decoration-none">
-          <img src="{% static 'img/twitter.png' %}" alt="twitter" width="40">
-        </a>
-        <a href="#" class="me-4 text-decoration-none">
-          <img src="{% static 'img/tiktok.png' %}" alt="tiktok" width="40">
-        </a>
-        <a href="#" class="me-4 text-decoration-none">
-          <img src="{% static 'img/spotify.png' %}" alt="spotify" width="40">
-        </a>
+        </div>
       </div>
-      <!-- Right -->
     </section>
     <!-- Section: Social media -->
 

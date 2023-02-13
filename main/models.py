@@ -3,6 +3,7 @@ from django.db import models
 class Equipo(models.Model):
   nombre_equipo = models.CharField(max_length=50)
   imagen = models.ImageField(upload_to="escudos", null=True)
+  pagina = models.CharField(max_length=150)
 
   def __str__(self):
       return self.nombre_equipo
