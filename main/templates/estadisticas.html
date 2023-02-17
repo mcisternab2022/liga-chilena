@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
 <div class="container marketing">
 
   <section id="team" class="team section-bg text-center">
@@ -18,6 +19,36 @@
       <br>
 
       <div class="row">
+        <h3 class="pb-3">Mejor Ataque</h3>
+        {% for a in ataque %}
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img " src="{{ a.equipo.imagen.url }}" alt="{{a.equipo}}" width="140" height="140">
+          <h2 class="fw-normal">{{a.equipo}}</h2>
+          <p>Goles {{a.goles_favor}}</p>
+        </div><!-- /.col-lg-4 -->
+        {% endfor %}
+      </div><!-- /.row -->
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="row">
+        <h3 class="pb-3">Mejor Defensa</h3>
+        {% for d in defensa %}
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img " src="{{ d.equipo.imagen.url }}" alt="{{d.equipo}}" width="140" height="140">
+          <h2 class="fw-normal">{{d.equipo}}</h2>
+          <p>Goles {{d.goles_contra}}</p>
+        </div><!-- /.col-lg-4 -->
+        {% endfor %}
+      </div><!-- /.row -->
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="row">
 
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate my-auto" data-aos="fade-up" data-aos-delay="200">
           <div>
@@ -27,59 +58,22 @@
           </div>
         </div>
 
+        {% for g in goleadores %}
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
           <div class="member">
             <div class="member-img">
-              <img src="{% static 'img/palacios.jpg' %}" class="img-fluid" alt="palacios">
+              <img src="{{ g.foto.url }}" class="img-fluid" alt="{{g.nombre_jugador}}" width="800" height="800">
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <p>{{g.equipo}} <img src="{{ g.equipo.imagen.url }}" alt="escudo" width="30"></p>
               </div>
             </div>
             <div class="member-info">
-              <h4>Cristian Palacios</h4>
-              <span>Universidad de Chile</span>
+              <h4 class="text-capitalize">{{g.nombre_jugador}}</h4>
+              <span>{{g.goles}} Goles</span>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-          <div class="member">
-            <div class="member-img">
-              <img src="{% static 'img/zampedri.jpg' %}" class="img-fluid" alt="zampedri">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Fernando Zampedri</h4>
-              <span>Universidad Católica</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-          <div class="member">
-            <div class="member-img">
-              <img src="{% static 'img/coelho.jpg' %}" class="img-fluid" alt="coelho">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Diego Coelho</h4>
-              <span>Curicó Unido</span>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
 
       </div>
 
@@ -95,59 +89,22 @@
           </div>
         </div>
 
+        {% for a in asistentes %}
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
           <div class="member">
             <div class="member-img">
-              <img src="{% static 'img/palacios.jpg' %}" class="img-fluid" alt="palacios">
+              <img src="{{ a.foto.url }}" class="img-fluid" alt="{{a.nombre_jugador}}" width="800" height="800">
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <p>{{a.equipo}} <img src="{{ a.equipo.imagen.url }}" alt="escudo" width="30"></p>
               </div>
             </div>
             <div class="member-info">
-              <h4>Cristian Palacios</h4>
-              <span>Universidad de Chile</span>
+              <h4 class="text-capitalize">{{a.nombre_jugador}}</h4>
+              <span>{{a.asistencias}} Asistencias</span>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-          <div class="member">
-            <div class="member-img">
-              <img src="{% static 'img/zampedri.jpg' %}" class="img-fluid" alt="zampedri">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Fernando Zampedri</h4>
-              <span>Universidad Católica</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-          <div class="member">
-            <div class="member-img">
-              <img src="{% static 'img/coelho.jpg' %}" class="img-fluid" alt="coelho">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Diego Coelho</h4>
-              <span>Curicó Unido</span>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
 
       </div>
 

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -48,6 +49,26 @@
           </tbody>
         </table>
   
+      </div>
+
+      
+      <div class="row">
+        <div class="col-lg-6">
+          <h4 class="text-center pb-2">Abreviaciones</h4>
+          <br>
+          <p>Pos=Posiciones.  PG=Partidos Ganados.</p> 
+          <p>PE=Partidos Empatados.  PP=Partidos Perdidos.</p> 
+          <p>GF=Goles A Favor.  GC=Goles En Contra.</p> 
+          <p>DF=Diferencia De Goles.  PJ=Partidos Jugados.</p>
+        </div>
+        <div class="col-lg-6 text-start">
+          <h4 class="text-center pb-2">Simbología</h4>
+          <p><img src="{% static 'img/color_campeon.png' %}" alt="" width="20"> Campeón/ Clasifica a Copa Libertadores</p>
+          <p><img src="{% static 'img/color_libertadores.png' %}" alt="" width="20"> Clasifican a Copa Libertadores</p>
+          <p><img src="{% static 'img/color_sudamericana.png' %}" alt="" width="20"> Clasifican a Copa Sudamericana</p>
+          <p><img src="{% static 'img/color_sin_competencia.png' %}" alt="" width="20"> No clasifican a copas internacionales ni descienden</p>
+          <p><img src="{% static 'img/color_descensos.png' %}" alt="" width="20"> Descienden directamente</p>
+        </div>
       </div>
 
     

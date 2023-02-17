@@ -28,9 +28,15 @@ def campeonato(request):
 
 @login_required
 def estadisticas(request):
-    jugadores = Jugador.objects.all()
+    ataque = Tabla.objects.all().order_by('-goles_favor')[:3]
+    defensa = Tabla.objects.all().order_by('-goles_contra')[:3]
+    goleadores = Jugador.objects.all().order_by('-goles')[:3]
+    asistentes = Jugador.objects.all().order_by('-asistencias')[:3]
     data = {
-        'jugadores': jugadores,
+        'defensa': defensa,
+        'ataque': ataque,
+        'goleadores': goleadores,
+        'asistentes': asistentes,
     }
 
     return render(request, 'estadisticas.html', data)
