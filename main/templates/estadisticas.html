@@ -18,11 +18,14 @@
 
       <br>
 
-      <div class="row">
-        <h3 class="pb-3">Mejor Ataque</h3>
+      <div class="row justify-content-center">
+        <div>
+          <img src="{% static 'img/ataque.png' %}" alt="ataque" width="30">
+          <h3 class="pb-3">Mejor Ataque</h3>
+        </div>
         {% for a in ataque %}
-        <div class="col-lg-4">
-          <img class="bd-placeholder-img " src="{{ a.equipo.imagen.url }}" alt="{{a.equipo}}" width="140" height="140">
+        <div class="col-lg-3 rounded shadow p-4 m-3 card text-white bg-dark">
+          <img class="bd-placeholder-img mx-auto" src="{{ a.equipo.imagen.url }}" alt="{{a.equipo}}" width="140" height="140">
           <h2 class="fw-normal">{{a.equipo}}</h2>
           <p>Goles {{a.goles_favor}}</p>
         </div><!-- /.col-lg-4 -->
@@ -33,11 +36,14 @@
       <hr>
       <br>
 
-      <div class="row">
-        <h3 class="pb-3">Mejor Defensa</h3>
+      <div class="row justify-content-center">
+        <div>
+          <img src="{% static 'img/defensa.png' %}" alt="defensa" width="30">
+          <h3 class="pb-3">Mejor Defensa</h3>
+        </div>
         {% for d in defensa %}
-        <div class="col-lg-4">
-          <img class="bd-placeholder-img " src="{{ d.equipo.imagen.url }}" alt="{{d.equipo}}" width="140" height="140">
+        <div class="col-lg-3 rounded shadow p-4 m-3 card text-white bg-dark">
+          <img class="bd-placeholder-img mx-auto" src="{{ d.equipo.imagen.url }}" alt="{{d.equipo}}" width="140" height="140">
           <h2 class="fw-normal">{{d.equipo}}</h2>
           <p>Goles {{d.goles_contra}}</p>
         </div><!-- /.col-lg-4 -->
@@ -50,7 +56,7 @@
 
       <div class="row">
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate my-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-3 col-md-6 pb-3 d-flex align-items-stretch aos-init aos-animate my-auto" data-aos="fade-up" data-aos-delay="200">
           <div>
             <h4>Maximos Goleadores</h4>
             <p>Estos son los máximos goleadores del campeonato.</p>
@@ -81,7 +87,7 @@
 
       <div class="row">
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate my-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-3 col-md-6 pb-3 d-flex align-items-stretch aos-init aos-animate my-auto" data-aos="fade-up" data-aos-delay="200">
           <div>
             <h4>Mayores Asistidores</h4>
             <p>Los jugadores con más asistencias del torneo.</p>
@@ -112,7 +118,7 @@
 
       <div class="row">
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate my-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-3 col-md-6 pb-3  d-flex align-items-stretch aos-init aos-animate my-auto" data-aos="fade-up" data-aos-delay="200">
           <div>
             <h4>Mejores Arqueros</h4>
             <p>Los arqueros titulares con menos goles en contra.</p>

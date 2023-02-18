@@ -29,7 +29,7 @@ def campeonato(request):
 @login_required
 def estadisticas(request):
     ataque = Tabla.objects.all().order_by('-goles_favor')[:3]
-    defensa = Tabla.objects.all().order_by('-goles_contra')[:3]
+    defensa = Tabla.objects.all().order_by('goles_contra')[:3]
     goleadores = Jugador.objects.all().order_by('-goles')[:3]
     asistentes = Jugador.objects.all().order_by('-asistencias')[:3]
     data = {
