@@ -25,14 +25,14 @@ class Jugador(models.Model):
 
 class Tabla(models.Model):
   equipo = models.ForeignKey(Equipo, on_delete=models.CASCADE)
-  puntos = models.IntegerField()
+  partidos_jugados = models.IntegerField()
+  partidos_ganados = models.IntegerField()
+  partidos_empatados = models.IntegerField()
+  partidos_perdidos = models.IntegerField()
   goles_favor = models.IntegerField()
   goles_contra = models.IntegerField()
-  partidos_ganados = models.IntegerField()
-  partidos_perdidos = models.IntegerField()
-  partidos_empatados = models.IntegerField()
-  partidos_jugados = models.IntegerField()
   diferencia = models.IntegerField()
+  puntos = models.IntegerField()
 
   def __str__(self):
       return "%s" % (self.equipo)
